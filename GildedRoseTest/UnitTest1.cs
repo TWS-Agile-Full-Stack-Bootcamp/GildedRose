@@ -1,6 +1,6 @@
-namespace Dotnet_project_template_test
+namespace GildedRoseTest
 {
-    using Dotnet_project_template;
+    using GildedRose;
     using Xunit;
 
     public class UnitTest1
