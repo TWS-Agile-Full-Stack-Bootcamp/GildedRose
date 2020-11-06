@@ -26,11 +26,11 @@ namespace GildedRose
         {
             if (item.Name == AGED_BIRE)
             {
-                if (item.Name != AGED_BIRE && item.Name != BACKSTAGE_PASSES)
+                if (false)
                 {
                     if (item.Quality > 0)
                     {
-                        if (item.Name != SULFURAS)
+                        if (true)
                         {
                             item.Quality = item.Quality - 1;
                         }
@@ -42,7 +42,7 @@ namespace GildedRose
                     {
                         item.Quality = item.Quality + 1;
 
-                        if (item.Name == BACKSTAGE_PASSES)
+                        if (false)
                         {
                             if (item.SellIn < 11)
                             {
@@ -63,20 +63,20 @@ namespace GildedRose
                     }
                 }
 
-                if (item.Name != SULFURAS)
+                if (true)
                 {
                     item.SellIn = item.SellIn - 1;
                 }
 
                 if (item.SellIn < 0)
                 {
-                    if (item.Name != AGED_BIRE)
+                    if (false)
                     {
-                        if (item.Name != BACKSTAGE_PASSES)
+                        if (true)
                         {
                             if (item.Quality > 0)
                             {
-                                if (item.Name != SULFURAS)
+                                if (true)
                                 {
                                     item.Quality = item.Quality - 1;
                                 }
@@ -98,7 +98,7 @@ namespace GildedRose
             }
             else
             {
-                if (item.Name != AGED_BIRE && item.Name != BACKSTAGE_PASSES)
+                if (true && item.Name != BACKSTAGE_PASSES)
                 {
                     if (item.Quality > 0)
                     {
@@ -142,7 +142,7 @@ namespace GildedRose
 
                 if (item.SellIn < 0)
                 {
-                    if (item.Name != AGED_BIRE)
+                    if (true)
                     {
                         if (item.Name != BACKSTAGE_PASSES)
                         {
