@@ -25,66 +25,68 @@ namespace GildedRose
 
         public void Update()
         {
-            if (this.Name == AGED_BIRE)
+            switch (Name)
             {
-                if (this.Quality < 50)
-                {
-                    this.Quality = this.Quality + 1;
-                }
-
-                this.SellIn = this.SellIn - 1;
-
-                if (this.SellIn < 0 && this.Quality < 50)
-                {
-                    this.Quality = this.Quality + 1;
-                }
-            }
-            else if (this.Name == BACKSTAGE_PASSES)
-            {
-                if (this.Quality < 50)
-                {
-                    this.Quality = this.Quality + 1;
-
-                    if (this.SellIn < 11)
+                case AGED_BIRE:
+                    if (Quality < 50)
                     {
-                        if (this.Quality < 50)
+                        Quality = Quality + 1;
+                    }
+
+                    SellIn = SellIn - 1;
+
+                    if (SellIn < 0 && Quality < 50)
+                    {
+                        Quality = Quality + 1;
+                    }
+
+                    break;
+                case BACKSTAGE_PASSES:
+                    if (Quality < 50)
+                    {
+                        Quality = Quality + 1;
+
+                        if (SellIn < 11)
                         {
-                            this.Quality = this.Quality + 1;
+                            if (Quality < 50)
+                            {
+                                Quality = Quality + 1;
+                            }
+                        }
+
+                        if (SellIn < 6)
+                        {
+                            if (Quality < 50)
+                            {
+                                Quality = Quality + 1;
+                            }
                         }
                     }
 
-                    if (this.SellIn < 6)
+                    SellIn = SellIn - 1;
+
+                    if (SellIn < 0)
                     {
-                        if (this.Quality < 50)
-                        {
-                            this.Quality = this.Quality + 1;
-                        }
+                        Quality = Quality - Quality;
                     }
-                }
 
-                this.SellIn = this.SellIn - 1;
+                    break;
+                case SULFURAS:
+                    break;
+                default:
+                    if (Quality > 0)
+                    {
+                        Quality = Quality - 1;
+                    }
 
-                if (this.SellIn < 0)
-                {
-                    this.Quality = this.Quality - this.Quality;
-                }
-            }
-            else if (this.Name == SULFURAS)
-            {
-            }
-            else
-            {
-                if (this.Quality > 0)
-                {
-                    this.Quality = this.Quality - 1;
-                }
+                    SellIn = SellIn - 1;
 
-                this.SellIn = this.SellIn - 1;
+                    if (SellIn < 0 && Quality > 0)
+                    {
+                        Quality = Quality - 1;
+                    }
 
-                if (this.SellIn < 0 && this.Quality > 0)
-                {
-                    this.Quality = this.Quality - 1;
-                }
+                    break;
             }
         }
     }
