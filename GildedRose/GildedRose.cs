@@ -70,27 +70,39 @@ namespace GildedRose
             }
             else
             {
+                if (item.Name == SULFURAS)
+                {
+                    UpdateItemOrigin(item);
+                }
+                else
+                {
+                    UpdateItemOrigin(item);
+                }
+            }
+        }
+
+        private static void UpdateItemOrigin(Item item)
+        {
+            if (item.Quality > 0)
+            {
+                if (item.Name != SULFURAS)
+                {
+                    item.Quality = item.Quality - 1;
+                }
+            }
+
+            if (item.Name != SULFURAS)
+            {
+                item.SellIn = item.SellIn - 1;
+            }
+
+            if (item.SellIn < 0)
+            {
                 if (item.Quality > 0)
                 {
                     if (item.Name != SULFURAS)
                     {
                         item.Quality = item.Quality - 1;
-                    }
-                }
-
-                if (item.Name != SULFURAS)
-                {
-                    item.SellIn = item.SellIn - 1;
-                }
-
-                if (item.SellIn < 0)
-                {
-                    if (item.Quality > 0)
-                    {
-                        if (item.Name != SULFURAS)
-                        {
-                            item.Quality = item.Quality - 1;
-                        }
                     }
                 }
             }
