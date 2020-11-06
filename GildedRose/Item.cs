@@ -20,7 +20,13 @@ namespace GildedRose
 
         public static Item CreateItem(string name, int sellIn, int quality)
         {
-            return new Item(name, sellIn, quality);
+            switch (name)
+            {
+                case AGED_BIRE: return new AgedBire(sellIn, quality);
+                case BACKSTAGE_PASSES: return new BackstagePasses(sellIn, quality);
+                case SULFURAS: return new Sulfuras(sellIn, quality);
+                default: return new Item(name, sellIn, quality);
+            }
         }
 
         public void Update()
