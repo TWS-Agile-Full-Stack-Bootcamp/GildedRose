@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace GildedRose
 {
@@ -12,11 +13,7 @@ namespace GildedRose
 
         public void UpdateQuality()
         {
-            for (var i = 0; i < items.Count; i++)
-            {
-                Item item = items[i];
-                item.Update();
-            }
+            items.ToList().ForEach(item => item.Update());
         }
     }
 }
