@@ -26,75 +26,14 @@ namespace GildedRose
         {
             if (item.Name == AGED_BIRE)
             {
-                UpdateItemOrigin(item);
-            }
-            else
-            {
-                UpdateItemOrigin(item);
-            }
-        }
-
-        private static void UpdateItemOrigin(Item item)
-        {
-            if (item.Name != AGED_BIRE && item.Name != BACKSTAGE_PASSES)
-            {
-                if (item.Quality > 0)
+                if (item.Name != AGED_BIRE && item.Name != BACKSTAGE_PASSES)
                 {
-                    if (item.Name != SULFURAS)
+                    if (item.Quality > 0)
                     {
-                        item.Quality = item.Quality - 1;
-                    }
-                }
-            }
-            else
-            {
-                if (item.Quality < 50)
-                {
-                    item.Quality = item.Quality + 1;
-
-                    if (item.Name == BACKSTAGE_PASSES)
-                    {
-                        if (item.SellIn < 11)
+                        if (item.Name != SULFURAS)
                         {
-                            if (item.Quality < 50)
-                            {
-                                item.Quality = item.Quality + 1;
-                            }
+                            item.Quality = item.Quality - 1;
                         }
-
-                        if (item.SellIn < 6)
-                        {
-                            if (item.Quality < 50)
-                            {
-                                item.Quality = item.Quality + 1;
-                            }
-                        }
-                    }
-                }
-            }
-
-            if (item.Name != SULFURAS)
-            {
-                item.SellIn = item.SellIn - 1;
-            }
-
-            if (item.SellIn < 0)
-            {
-                if (item.Name != AGED_BIRE)
-                {
-                    if (item.Name != BACKSTAGE_PASSES)
-                    {
-                        if (item.Quality > 0)
-                        {
-                            if (item.Name != SULFURAS)
-                            {
-                                item.Quality = item.Quality - 1;
-                            }
-                        }
-                    }
-                    else
-                    {
-                        item.Quality = item.Quality - item.Quality;
                     }
                 }
                 else
@@ -102,6 +41,130 @@ namespace GildedRose
                     if (item.Quality < 50)
                     {
                         item.Quality = item.Quality + 1;
+
+                        if (item.Name == BACKSTAGE_PASSES)
+                        {
+                            if (item.SellIn < 11)
+                            {
+                                if (item.Quality < 50)
+                                {
+                                    item.Quality = item.Quality + 1;
+                                }
+                            }
+
+                            if (item.SellIn < 6)
+                            {
+                                if (item.Quality < 50)
+                                {
+                                    item.Quality = item.Quality + 1;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                if (item.Name != SULFURAS)
+                {
+                    item.SellIn = item.SellIn - 1;
+                }
+
+                if (item.SellIn < 0)
+                {
+                    if (item.Name != AGED_BIRE)
+                    {
+                        if (item.Name != BACKSTAGE_PASSES)
+                        {
+                            if (item.Quality > 0)
+                            {
+                                if (item.Name != SULFURAS)
+                                {
+                                    item.Quality = item.Quality - 1;
+                                }
+                            }
+                        }
+                        else
+                        {
+                            item.Quality = item.Quality - item.Quality;
+                        }
+                    }
+                    else
+                    {
+                        if (item.Quality < 50)
+                        {
+                            item.Quality = item.Quality + 1;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                if (item.Name != AGED_BIRE && item.Name != BACKSTAGE_PASSES)
+                {
+                    if (item.Quality > 0)
+                    {
+                        if (item.Name != SULFURAS)
+                        {
+                            item.Quality = item.Quality - 1;
+                        }
+                    }
+                }
+                else
+                {
+                    if (item.Quality < 50)
+                    {
+                        item.Quality = item.Quality + 1;
+
+                        if (item.Name == BACKSTAGE_PASSES)
+                        {
+                            if (item.SellIn < 11)
+                            {
+                                if (item.Quality < 50)
+                                {
+                                    item.Quality = item.Quality + 1;
+                                }
+                            }
+
+                            if (item.SellIn < 6)
+                            {
+                                if (item.Quality < 50)
+                                {
+                                    item.Quality = item.Quality + 1;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                if (item.Name != SULFURAS)
+                {
+                    item.SellIn = item.SellIn - 1;
+                }
+
+                if (item.SellIn < 0)
+                {
+                    if (item.Name != AGED_BIRE)
+                    {
+                        if (item.Name != BACKSTAGE_PASSES)
+                        {
+                            if (item.Quality > 0)
+                            {
+                                if (item.Name != SULFURAS)
+                                {
+                                    item.Quality = item.Quality - 1;
+                                }
+                            }
+                        }
+                        else
+                        {
+                            item.Quality = item.Quality - item.Quality;
+                        }
+                    }
+                    else
+                    {
+                        if (item.Quality < 50)
+                        {
+                            item.Quality = item.Quality + 1;
+                        }
                     }
                 }
             }
