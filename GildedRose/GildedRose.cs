@@ -26,74 +26,16 @@ namespace GildedRose
         {
             if (item.Name == AGED_BIRE)
             {
-                if (false)
+                if (item.Quality < 50)
                 {
-                    if (item.Quality > 0)
-                    {
-                        if (true)
-                        {
-                            item.Quality = item.Quality - 1;
-                        }
-                    }
-                }
-                else
-                {
-                    if (item.Quality < 50)
-                    {
-                        item.Quality = item.Quality + 1;
-
-                        if (false)
-                        {
-                            if (item.SellIn < 11)
-                            {
-                                if (item.Quality < 50)
-                                {
-                                    item.Quality = item.Quality + 1;
-                                }
-                            }
-
-                            if (item.SellIn < 6)
-                            {
-                                if (item.Quality < 50)
-                                {
-                                    item.Quality = item.Quality + 1;
-                                }
-                            }
-                        }
-                    }
+                    item.Quality = item.Quality + 1;
                 }
 
-                if (true)
-                {
-                    item.SellIn = item.SellIn - 1;
-                }
+                item.SellIn = item.SellIn - 1;
 
-                if (item.SellIn < 0)
+                if (item.SellIn < 0 && item.Quality < 50)
                 {
-                    if (false)
-                    {
-                        if (true)
-                        {
-                            if (item.Quality > 0)
-                            {
-                                if (true)
-                                {
-                                    item.Quality = item.Quality - 1;
-                                }
-                            }
-                        }
-                        else
-                        {
-                            item.Quality = item.Quality - item.Quality;
-                        }
-                    }
-                    else
-                    {
-                        if (item.Quality < 50)
-                        {
-                            item.Quality = item.Quality + 1;
-                        }
-                    }
+                    item.Quality = item.Quality + 1;
                 }
             }
             else
@@ -157,13 +99,6 @@ namespace GildedRose
                         else
                         {
                             item.Quality = item.Quality - item.Quality;
-                        }
-                    }
-                    else
-                    {
-                        if (item.Quality < 50)
-                        {
-                            item.Quality = item.Quality + 1;
                         }
                     }
                 }
