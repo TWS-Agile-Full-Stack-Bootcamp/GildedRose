@@ -16,7 +16,7 @@ namespace GildedRose
 
             DecreaseSellIn();
 
-            if (SellIn < 0 && IsBelowMaxQuality())
+            if (IsSellInExpired() && IsBelowMaxQuality())
             {
                 IncreaseQuality();
             }

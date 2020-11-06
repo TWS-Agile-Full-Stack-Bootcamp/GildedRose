@@ -38,10 +38,15 @@ namespace GildedRose
 
             DecreaseSellIn();
 
-            if (SellIn < 0 && IsOverMinQuality())
+            if (IsSellInExpired() && IsOverMinQuality())
             {
                 DecreaseQuality();
             }
+        }
+
+        protected bool IsSellInExpired()
+        {
+            return SellIn < 0;
         }
 
         protected void DecreaseQuality()

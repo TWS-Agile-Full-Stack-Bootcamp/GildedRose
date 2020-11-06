@@ -32,7 +32,7 @@ namespace GildedRose
 
             DecreaseSellIn();
 
-            if (SellIn < 0)
+            if (IsSellInExpired())
             {
                 Quality = Quality - Quality;
             }
