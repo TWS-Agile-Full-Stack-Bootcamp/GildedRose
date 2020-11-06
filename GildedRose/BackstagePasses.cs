@@ -9,13 +9,13 @@ namespace GildedRose
 
         public override void Update()
         {
-            if (Quality < 50)
+            if (HasReachQualityUpperLimit())
             {
                 Quality = Quality + 1;
 
                 if (SellIn < 11)
                 {
-                    if (Quality < 50)
+                    if (HasReachQualityUpperLimit())
                     {
                         Quality = Quality + 1;
                     }
@@ -23,7 +23,7 @@ namespace GildedRose
 
                 if (SellIn < 6)
                 {
-                    if (Quality < 50)
+                    if (HasReachQualityUpperLimit())
                     {
                         Quality = Quality + 1;
                     }

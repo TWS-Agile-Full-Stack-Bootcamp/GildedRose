@@ -43,5 +43,10 @@ namespace GildedRose
                 Quality = Quality - 1;
             }
         }
+
+        protected bool HasReachQualityUpperLimit()
+        {
+            return Quality < 50;
+        }
     }
 }
