@@ -73,5 +73,10 @@ namespace GildedRose
         {
             return Quality < 50;
         }
+
+        protected bool IsSellInNoGreaterThan(int sellInUpperBound)
+        {
+            return SellIn <= sellInUpperBound;
+        }
     }
 }
