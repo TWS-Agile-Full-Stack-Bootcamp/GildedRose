@@ -24,6 +24,18 @@ namespace GildedRose
 
         private static void UpdateItem(Item item)
         {
+            if (item.Name == AGED_BIRE)
+            {
+                UpdateItemOrigin(item);
+            }
+            else
+            {
+                UpdateItemOrigin(item);
+            }
+        }
+
+        private static void UpdateItemOrigin(Item item)
+        {
             if (item.Name != AGED_BIRE && item.Name != BACKSTAGE_PASSES)
             {
                 if (item.Quality > 0)
