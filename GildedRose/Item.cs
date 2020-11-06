@@ -31,20 +31,25 @@ namespace GildedRose
 
         public virtual void Update()
         {
-            if (Quality > 0)
+            if (IsOverMinQuality())
             {
                 Quality = Quality - 1;
             }
 
             SellIn = SellIn - 1;
 
-            if (SellIn < 0 && Quality > 0)
+            if (SellIn < 0 && IsOverMinQuality())
             {
                 Quality = Quality - 1;
             }
         }
 
-        protected bool HasReachQualityUpperLimit()
+        protected bool IsOverMinQuality()
+        {
+            return Quality > 0;
+        }
+
+        protected bool IsBelowMaxQuality()
         {
             return Quality < 50;
         }

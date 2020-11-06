@@ -9,14 +9,14 @@ namespace GildedRose
 
         public override void Update()
         {
-            if (HasReachQualityUpperLimit())
+            if (IsBelowMaxQuality())
             {
                 Quality = Quality + 1;
             }
 
             SellIn = SellIn - 1;
 
-            if (SellIn < 0 && HasReachQualityUpperLimit())
+            if (SellIn < 0 && IsBelowMaxQuality())
             {
                 Quality = Quality + 1;
             }
