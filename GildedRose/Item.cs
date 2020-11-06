@@ -7,9 +7,21 @@ namespace GildedRose
         private const string BACKSTAGE_PASSES = "Backstage passes to a TAFKAL80ETC concert";
         private const string SULFURAS = "Sulfuras, Hand of Ragnaros";
 
+        protected Item(string name, int sellIn, int quality)
+        {
+            Name = name;
+            SellIn = sellIn;
+            Quality = quality;
+        }
+
         public string Name { get; set; }
         public int SellIn { get; set; }
         public int Quality { get; set; }
+
+        public static Item CreateItem(string name, int sellIn, int quality)
+        {
+            return new Item(name, sellIn, quality);
+        }
 
         public void Update()
         {
