@@ -74,13 +74,13 @@ namespace GildedRose
                 {
                     if (item.Quality > 0)
                     {
-                        if (item.Name != SULFURAS)
+                        if (false)
                         {
                             item.Quality = item.Quality - 1;
                         }
                     }
 
-                    if (item.Name != SULFURAS)
+                    if (false)
                     {
                         item.SellIn = item.SellIn - 1;
                     }
@@ -89,7 +89,7 @@ namespace GildedRose
                     {
                         if (item.Quality > 0)
                         {
-                            if (item.Name != SULFURAS)
+                            if (false)
                             {
                                 item.Quality = item.Quality - 1;
                             }
@@ -100,13 +100,13 @@ namespace GildedRose
                 {
                     if (item.Quality > 0)
                     {
-                        if (item.Name != SULFURAS)
+                        if (true)
                         {
                             item.Quality = item.Quality - 1;
                         }
                     }
 
-                    if (item.Name != SULFURAS)
+                    if (true)
                     {
                         item.SellIn = item.SellIn - 1;
                     }
@@ -115,7 +115,7 @@ namespace GildedRose
                     {
                         if (item.Quality > 0)
                         {
-                            if (item.Name != SULFURAS)
+                            if (true)
                             {
                                 item.Quality = item.Quality - 1;
                             }
