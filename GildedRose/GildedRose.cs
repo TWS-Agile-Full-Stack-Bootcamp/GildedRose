@@ -72,37 +72,54 @@ namespace GildedRose
             {
                 if (item.Name == SULFURAS)
                 {
-                    UpdateItemOrigin(item);
+                    if (item.Quality > 0)
+                    {
+                        if (item.Name != SULFURAS)
+                        {
+                            item.Quality = item.Quality - 1;
+                        }
+                    }
+
+                    if (item.Name != SULFURAS)
+                    {
+                        item.SellIn = item.SellIn - 1;
+                    }
+
+                    if (item.SellIn < 0)
+                    {
+                        if (item.Quality > 0)
+                        {
+                            if (item.Name != SULFURAS)
+                            {
+                                item.Quality = item.Quality - 1;
+                            }
+                        }
+                    }
                 }
                 else
                 {
-                    UpdateItemOrigin(item);
-                }
-            }
-        }
+                    if (item.Quality > 0)
+                    {
+                        if (item.Name != SULFURAS)
+                        {
+                            item.Quality = item.Quality - 1;
+                        }
+                    }
 
-        private static void UpdateItemOrigin(Item item)
-        {
-            if (item.Quality > 0)
-            {
-                if (item.Name != SULFURAS)
-                {
-                    item.Quality = item.Quality - 1;
-                }
-            }
-
-            if (item.Name != SULFURAS)
-            {
-                item.SellIn = item.SellIn - 1;
-            }
-
-            if (item.SellIn < 0)
-            {
-                if (item.Quality > 0)
-                {
                     if (item.Name != SULFURAS)
                     {
-                        item.Quality = item.Quality - 1;
+                        item.SellIn = item.SellIn - 1;
+                    }
+
+                    if (item.SellIn < 0)
+                    {
+                        if (item.Quality > 0)
+                        {
+                            if (item.Name != SULFURAS)
+                            {
+                                item.Quality = item.Quality - 1;
+                            }
+                        }
                     }
                 }
             }
