@@ -30,7 +30,7 @@ namespace GildedRose
                 }
             }
 
-            SellIn = SellIn - 1;
+            DecreaseSellIn();
 
             if (SellIn < 0)
             {
