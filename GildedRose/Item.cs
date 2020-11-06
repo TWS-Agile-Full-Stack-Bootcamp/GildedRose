@@ -33,15 +33,25 @@ namespace GildedRose
         {
             if (IsOverMinQuality())
             {
-                Quality = Quality - 1;
+                DecreaseQuality();
             }
 
             DecreaseSellIn();
 
             if (SellIn < 0 && IsOverMinQuality())
             {
-                Quality = Quality - 1;
+                DecreaseQuality();
             }
+        }
+
+        protected void DecreaseQuality()
+        {
+            Quality -= 1;
+        }
+
+        protected void IncreaseQuality()
+        {
+            Quality += 1;
         }
 
         protected void DecreaseSellIn()

@@ -11,14 +11,14 @@ namespace GildedRose
         {
             if (IsBelowMaxQuality())
             {
-                Quality = Quality + 1;
+                IncreaseQuality();
             }
 
             DecreaseSellIn();
 
             if (SellIn < 0 && IsBelowMaxQuality())
             {
-                Quality = Quality + 1;
+                IncreaseQuality();
             }
         }
     }
